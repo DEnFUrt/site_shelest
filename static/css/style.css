@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import '../css/header.css';
+@import '../css/navbar.css';
+@import '../css/about.css';
+@import '../css/portfolio.css';
+@import '../css/blog.css';
+@import '../css/team.css';
+@import '../css/contact.css';
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Raleway";
+}
+
+
+
+.bg-dark {
+  background-color: #343a40 !important
+}
+
+.bg-primary {
+  background-color: #007bff !important
+}

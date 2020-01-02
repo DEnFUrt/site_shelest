@@ -1,0 +1,36 @@
+.team {
+  margin: 4em 0;
+  position: relative;
+}
+
+.team h1 {
+  color: olivedrab;
+  margin: 2em;
+}
+
+.team .item {
+  position: relative;
+}
+
+.team .des {
+  background: olivedrab;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 93%;
+  transition: .3s ease-in-out;
+}
+
+/* .team .item:hover .des {
+  height: 100%;
+  background: darkolivegreen;
+  position: absolute;
+  width: 89%;
+  padding: 5em;
+  top: 0;
+  border-bottom-left-radius: 0;
+} */
+
+.team img {
+  height: 350px;
+  width: 200px; 
+}

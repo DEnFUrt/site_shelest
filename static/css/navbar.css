@@ -1,0 +1,29 @@
+.navbar {
+  background: olivedrab;
+}
+
+.nav-link,
+.navbar-brand {
+  color:  black;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+  outline:none;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background: darkolivegreen;
+  color: black;
+  
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-toggler {
+  background: darkolivegreen !important;
+}
