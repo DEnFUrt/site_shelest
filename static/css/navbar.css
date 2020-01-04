@@ -6,18 +6,22 @@
 .navbar-brand {
   color:  black;
   cursor: pointer;
-}
-
-.nav-link {
-  margin-right: 1em !important;
   outline:none;
   border-radius: 5px;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.navbar-brand:hover {
+  color:  black;
   background: darkolivegreen;
-  color: black;
-  
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.navbar-brand {
+  padding: 10px;
 }
 
 .navbar-collapse {
@@ -26,4 +30,12 @@
 
 .navbar-toggler {
   background: darkolivegreen !important;
+}
+
+:target:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -70px; 
+  height: 70px; 
+  visibility: hidden; 
 }

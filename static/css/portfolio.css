@@ -1,6 +1,7 @@
 /*Portfolio*/
 .portfolio {
   margin: 4em 0;
+  padding-top: 1em;
   position: relative;
 }
 
@@ -11,7 +12,9 @@
 
 .portfolio img {
   height: 15rem;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   margin: 1em;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px gray;
 }
