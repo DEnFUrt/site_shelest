@@ -11,6 +11,9 @@
 
 .team .item {
   position: relative;
+  width: 250px;
+  height: 450px;
+
 }
 
 .team .des {
@@ -36,9 +39,9 @@
 }
 
 .team img {
-  max-width: 100%;
-  min-width: 100%;
-  height: 400px;
+  /* max-width: 100%;
+  min-width: 100%; */
+  /* height:100%; */
   border-radius: 5px;
   box-shadow: 5px 0px 10px gray;
   transition: all .1s;
