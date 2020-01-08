@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Marmelad|Underdog&display=swap');
 @import '../css/header.css';
 @import '../css/navbar.css';
 @import '../css/about.css';
@@ -15,7 +15,9 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Raleway";
+  /* font-family: 'Marmelad', sans-serif; */
+  /* font-family: 'Underdog', cursive; */
+  font-family: 'Arsenal', sans-serif;
 }
 
 

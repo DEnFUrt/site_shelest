@@ -32,14 +32,3 @@ $("body").click(function() {
     $(".navbar-collapse").collapse('hide');
   }
 });
-
-// $(function() {
-//   // путь текущей страницы
-//   let pathPage = location.pathname.slice(1);
-//   let parentUl = $(`.navbar-nav a[href*='${pathPage}']`).closest('li').addClass('active').parent('ul');
-//   if (parent.closest('.navbar-nav li').length) {
-//     parentUl.closest('li').addClass('active');
-//   }
-// });
-
-

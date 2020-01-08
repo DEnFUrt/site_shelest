@@ -17,8 +17,7 @@
   const regexEmail = /^([\w-]+\.)*[\w-]+@[\w-]+(\.[\w-]+)*\.[a-z]{2,6}$/,
     regexInput = /[А-Яа-я\w]/;
 
-
-
+  //SCRIPTS
   for (let formControl of formControls) {
     focusBind(formControl);
     blurBind(formControl);
@@ -43,11 +42,19 @@
 
     //заглушка, перегружает форму 
     event.preventDefault();
-    setOffClass(alertSuccess, alertSuccessUnvisible);
+    /* setOffClass(alertSuccess, alertSuccessUnvisible);
     setTimeout(() => {
       setOnClass(alertSuccess, alertSuccessUnvisible);
       //setTimeout(arguments.callee, 0);
-    }, 5000);
+    }, 5000); */
+    
+    //Функция jquery из bootstrap включает  выключает popover 
+    $("#submitPopover").popover({
+      content: 'Сообщение отправлено',
+      placement: 'top',
+      delay: { show: 500, hide: 100 },
+    }).popover('show');
+    setTimeout(() => {$("#submitPopover").popover('hide')}, 5000);
   
     form.reset();
 
