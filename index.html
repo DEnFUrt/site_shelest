@@ -17,19 +17,13 @@
     aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <!-- <div class="modal-header">
-          <h6 class="modal-title" id="exampleModalLabel">Фотоальбом</h6>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> -->
         <div class="modal-body">
-  <!-- Carousel -->
+          <!-- Carousel -->
           <div id="carousel" class="carousel slide d-inline-block mx-auto" data-ride="carousel">
             <div class="carousel-inner">
-              
+
             </div>
-  <!-- Элементы управления -->
+            <!-- Элементы управления -->
             <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Предыдущий</span>
@@ -50,12 +44,12 @@
     </div>
   </template>
   <!-- Modal posts-->
-  <div class="modal fade" id="exampleModalPosts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade bd-example-modal-xl" id="exampleModalPosts" tabindex="-1" role="dialog" aria-labelledby="exampleModalPostsLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h6 class="modal-title" id="exampleModalPostsLabel">...</h6>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -64,8 +58,7 @@
           ,kz ,kz ,kz
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>
@@ -185,107 +178,7 @@
       <div class="container">
         <h1 class="text-center">Новости</h1>
         <div class="row">
-
-          <!-- <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div>
-          <!-- второй блок новостей -->
-          
-          <!--<div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
-            <div class="card">
-              <div class="card-img">
-                <img src="./static/img/news/news1/foto-news_1.jpg" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Новость</h4>
-                <p class="card-text">
-                  Текст новости, текст новости, текст новости
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="" class="card-link">Читать дальше</a>
-              </div>
-            </div>
-          </div> -->
+          <!-- Template posts element -->
           <template id="template-cards">
             <div class="col-md-4 col-lg-4 col-sm-12 card-custom">
               <div class="card">
@@ -297,6 +190,7 @@
                   <p class="card-text">...</p>
                 </div>
                 <div class="card-footer">
+                  <!-- data-toggle="modal" data-target="#exampleModalPosts" -->
                   <a href="" class="card-link">Читать дальше...</a>
                 </div>
               </div>
@@ -387,7 +281,8 @@
                 </label>
               </div>
               <div class=" d-flex justify-content-center">
-                <input disabled class="btn btn-primary btn-secondary btn-lg btn-custom" type="submit" value="Отправить" id="submitPopover" data-toggle="popover">
+                <input disabled class="btn btn-primary btn-secondary btn-lg btn-custom" type="submit" value="Отправить"
+                  id="submitPopover" data-toggle="popover">
               </div>
             </div>
           </div>

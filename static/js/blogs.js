@@ -1,9 +1,11 @@
 //CONSTANTS
 
 const templateCard = document.querySelector('#template-cards').content,
-  blog = document.querySelector('.blog .row');
-
-  
+  blog = document.querySelector('.blog .row'),
+  modal = document.querySelector('#exampleModalPosts'),
+  modalTitle = modal.querySelector('#exampleModalPostsLabel'),
+  modalText = modal.querySelector('.modal-body');
+    
   //console.log(blog)
 
 
@@ -56,7 +58,7 @@ function parseJson (posts) {
   for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
     addCard(post);
-    //addImgPortfolioListener(portfolio, i);
+    
   }
 }
 
@@ -65,21 +67,27 @@ function addCard(post) {
   let templateImgNewCard = templateNewCard.querySelector('img');
   let templateTitleNewCard = templateNewCard.querySelector('.card-title');
   let templateTextNewCard = templateNewCard.querySelector('.card-text');
+  let templateLinkNewCard = templateNewCard.querySelector('.card-link');
   //let templateDivCarousel = templateItemCarousel.querySelector('.carousel-item');
   
   templateImgNewCard.src = post.srcImg;
   templateTitleNewCard.innerText = post.cardTitle;
   templateTextNewCard.innerText = post.cardTetx;
+  
+  addCardListener(templateLinkNewCard, post);
 
-  //templateDivCarousel.setAttribute('data-number', numberImg);
   blog.appendChild(templateNewCard);
 }
 
-// function addImgPortfolioListener(imgPortfolio, numberImg) {
-//   imgPortfolio.addEventListener('click', () => {
-//     carousel.querySelector(`div[data-number = "${numberImg}"]`).classList.add('active');
-//     $('#exampleModalCarousel').modal('show'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
-//   });
-// }
+function addCardListener(linkCard, post) {
+  linkCard.addEventListener('click', (e) => {
+  e.preventDefault();
+    //addContentModal
+  modalTitle.innerText = post.cardTitle;
+  modalText.innerText = post.postText;
+
+    $('#exampleModalPosts').modal('show').modal('handleUpdate'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
+  });
+}
 
 
