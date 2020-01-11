@@ -20,7 +20,17 @@
 
 .blog .card-title {
   color: olivedrab;
+  --card-title-font-size: 1.5rem;
+  font-size: var(--card-title-font-size);
+}
+.blog .card-text {
+  --card-text-font-size: 1rem;
+  font-size: var(--card-text-font-size);
+}
 
+.blog .card-link {
+  --card-link-font-size: 1rem;
+  font-size: var(--card-link-font-size);
 }
 
 .blog .card-body {
@@ -29,4 +39,16 @@
 
 .card-custom {
   padding-bottom: 1em;
+}
+
+@media(max-width: 500px) {
+  .blog .card-title {
+    --card-title-font-size: 1rem;
+  }
+  .blog .card-text {
+    --card-text-font-size: 0.7rem;
+  }
+  .blog .card-link {
+    --card-link-font-size: 0.7rem;
+  }
 }

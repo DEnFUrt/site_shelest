@@ -18,7 +18,7 @@ function addItemCarousel(imgPortfolio, numberImg) {
 function addImgPortfolioListener(imgPortfolio, numberImg) {
   imgPortfolio.addEventListener('click', () => {
     carousel.querySelector(`div[data-number = "${numberImg}"]`).classList.add('active');
-    $('#exampleModalCarousel').modal('show'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
+    $('#exampleModalCarousel').modal('show').modal('handleUpdate'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
   });
 }
 
@@ -28,6 +28,6 @@ for (let i = 0; i < portfolios.length; i++) {
   addImgPortfolioListener(portfolio, i);
 }
 
-$("#exampleModalCarousel").on('hidden.bs.modal', function(){         //функция jquery из пакета bootstrap реагирует на закрытие карусели
+$("#exampleModalCarousel").on('hidden.bs.modal', function() {         //функция jquery из пакета bootstrap реагирует на закрытие карусели
   carousel.querySelector(`div + .active`).classList.remove('active');
 });

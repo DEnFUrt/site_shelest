@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arsenal|Marmelad|Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arsenal&display=swap');
 @import '../css/header.css';
 @import '../css/navbar.css';
 @import '../css/about.css';
@@ -15,8 +15,6 @@ h4,
 h5,
 h6,
 a {
-  /* font-family: 'Marmelad', sans-serif; */
-  /* font-family: 'Underdog', cursive; */
   font-family: 'Arsenal', sans-serif;
 }
 
