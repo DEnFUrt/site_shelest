@@ -10,7 +10,7 @@ const templateCard = document.querySelector('#template-cards').content,
 //SCRIPTS
 
 // Load json
-// fetch('../static/js/blogs.json')  
+// fetch('https://denfurt.github.io/site_shelest/static/js/blogs.json')  
 //   .then(  
 //     function(response) {  
 //       if (response.status !== 200) {  
