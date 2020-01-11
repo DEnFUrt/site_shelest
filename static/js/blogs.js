@@ -43,7 +43,7 @@ function json(response) {
   return response.json()  
 }
 
-fetch('/static/js/blogs.json')  
+fetch('https://denfurt.github.io/site_shelest/static/js/blogs.json')  
   .then(status)  
   .then(json)  
   .then(function(data) {  
