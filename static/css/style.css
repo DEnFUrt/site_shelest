@@ -6,6 +6,7 @@
 @import '../css/blog.css';
 @import '../css/team.css';
 @import '../css/contact.css';
+@import '../css/modal.css';
 
 html,
 h1,
@@ -17,8 +18,6 @@ h6,
 a {
   font-family: 'Arsenal', sans-serif;
 }
-
-
 
 .bg-dark {
   background-color: #343a40 !important

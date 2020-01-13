@@ -13,7 +13,7 @@
 
 <body>
   <!-- Modal carousel-->
-  <div class="modal fade " id="exampleModalCarousel" tabindex="-1" role="carousel"
+  <div class="modal fade" id="exampleModalCarousel" tabindex="-1" role="carousel"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -44,8 +44,7 @@
     </div>
   </template>
   <!-- Modal posts-->
-  <div class="modal fade" id="exampleModalPosts" tabindex="-1" role="dialog" aria-labelledby="exampleModalPostsLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="exampleModalPosts" tabindex="-1" role="document" aria-labelledby="exampleModalPostsLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -55,10 +54,16 @@
           </button>
         </div>
         <div class="modal-body">
-          ,kz ,kz ,kz
+          <div class="container-fluid">
+            <img src="" class="col-md-8 col-sm-12 img-fluid float-lg-left" alt="photo for posts">
+            <p>...</p>
+            <div class="embed-responsive-16by9 d-none" id="embed">
+              <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn-sm btn-secondary" data-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>

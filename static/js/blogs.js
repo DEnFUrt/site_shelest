@@ -4,7 +4,10 @@ const templateCard = document.querySelector('#template-cards').content,
   blog = document.querySelector('.blog .row'),
   modal = document.querySelector('#exampleModalPosts'),
   modalTitle = modal.querySelector('#exampleModalPostsLabel'),
-  modalText = modal.querySelector('.modal-body');
+  modalPicture = modal.querySelector('.modal img'),
+  modalText = modal.querySelector('.modal-body p'),
+  modalEmbed = modal.querySelector('#embed'),
+  modalFrame = modal.querySelector('iframe');
     
   //console.log(blog)
 
@@ -58,7 +61,6 @@ function parseJson (posts) {
   for (let i = 0; i < posts.length; i++) {
     let post = posts[i];
     addCard(post);
-    
   }
 }
 
@@ -84,10 +86,28 @@ function addCardListener(linkCard, post) {
   e.preventDefault();
     //addContentModal
   modalTitle.innerText = post.cardTitle;
+  modalPicture.src = post.srcImg;
   modalText.innerText = post.postText;
+  
+  if (post.VideoOn === 'on') {
+    modalFrame.src = post.srcVideo;
+    setOnEmbed(modalEmbed);
+  } else {
+    setOffEmbed(modalEmbed);
+  }
 
     $('#exampleModalPosts').modal('show').modal('handleUpdate'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
   });
 }
 
+function setOffEmbed(inputTarget) {
+  if (!inputTarget.classList.contains('d-none')) {
+      inputTarget.classList.toggle('d-none');
+  }
+}
 
+function setOnEmbed(inputTarget) {
+  if (inputTarget.classList.contains('d-none')) {
+      inputTarget.classList.toggle('d-none');
+  }
+};

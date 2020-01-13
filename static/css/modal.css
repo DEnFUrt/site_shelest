@@ -1,0 +1,20 @@
+#exampleModalPosts .modal-title {
+  --modal-title-font-size: 1.5rem;
+  font-size: var(--modal-title-font-size);
+}
+
+#exampleModalPosts .modal-body p {
+  --modal-body-font-size: 1rem;
+  font-size: var(--modal-body-font-size);
+}
+
+@media(max-width: 500px) {
+  #exampleModalPosts .modal-title {
+    --modal-title-font-size: 1rem;
+    font-size: var(--modal-title-font-size);
+  }
+  #exampleModalPosts .modal-body p {
+    --modal-body-font-size: 0.7rem;
+    font-size: var(--modal-body-font-size);
+  }
+}
