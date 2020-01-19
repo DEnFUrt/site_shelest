@@ -25,6 +25,7 @@ $(".navbar-collapse a").click(function() {
   }
 });
 
+//при нажатии мимо меню
 $("body").click(function() {
   //если она не имеет класс dropdown-toggle
   if (!$(this).hasClass("dropdown-toggle")) {

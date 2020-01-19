@@ -2,15 +2,18 @@
   //DOM
   const container = document.getElementById('contact'),
     checkBox = document.querySelector('input[type="checkbox"]'),
-    alertSuccess = document.querySelector('.alert'),
+    alertSuccess = document.getElementById('alert-success'),
+    alertDanger = document.getElementById('alert-danger'),
+    alertSpinner = document.getElementById('alert-spinner'),
     formControls = document.querySelectorAll('.form-control'),
     btnSubmit = document.querySelector('input[type="submit"]'),
+    btnCloseAlert = document.querySelector('.alert-block'),
     form = document.querySelector('.form');
 
   //PARAMETERS
   const invalidFeedbackVisible = 'd-block',
-    alertSuccessUnvisible = 'd-none',
     labelUp = 'label-custom-up',
+    alertUp = 'd-block',
     btnSubmitAttr = 'disabled',
     btnSubmitClass = 'btn-secondary';
 
@@ -37,36 +40,49 @@
   });
 
   btnSubmit.addEventListener('click', (e) => {
-
-    // вставить код отправки формы
-
-    //заглушка, перегружает форму 
     event.preventDefault();
-    /* setOffClass(alertSuccess, alertSuccessUnvisible);
-    setTimeout(() => {
-      setOnClass(alertSuccess, alertSuccessUnvisible);
-      //setTimeout(arguments.callee, 0);
-    }, 5000); */
-    
-    //Функция jquery из bootstrap включает  выключает popover 
-    $("#submitPopover").popover({
-      content: 'Сообщение отправлено',
-      placement: 'top',
-      delay: { show: 500, hide: 100 },
-    }).popover('show');
-    setTimeout(() => {$("#submitPopover").popover('hide')}, 5000);
-  
+    let form_data = $(form).serialize();
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: form_data,
+      beforeSend: function() {
+        setOnClass(alertSpinner, alertUp);
+      },
+      complete: function() {
+        setOffClass(alertSpinner, alertUp);
+      },
+      success: function () {
+        setOnClass(alertSuccess, alertUp);
+        offAlert(alertSuccess);
+      },
+      error: function() {
+        setOnClass(alertDanger, alertUp);
+        offAlert(alertDanger);
+      }
+    });
+
     form.reset();
 
+    //возвращаем Label на место
     for (let formControl of formControls) {
       setOffClass(formControl.previousElementSibling, labelUp);
     }
     setOnAttr(e.currentTarget, btnSubmitAttr);
     setOnClass(e.currentTarget, btnSubmitClass);
-    
   });
 
+  btnCloseAlert.addEventListener('click', handlerAlert);
+
   // function 
+
+  function handlerAlert(e) {
+    const target = e.target;
+    if (target.classList.contains('alert-close')) {
+      const targetAlert = e.currentTarget.querySelector(`#${target.dataset.alert}`);
+      setOffClass(targetAlert, alertUp);
+    }
+  }
 
   function focusBind(formControl) {
     formControl.addEventListener('focus', (e) => {
@@ -160,5 +176,11 @@
       return true;
     }
   }
+
+  function offAlert(targetAlert) {
+    setTimeout(() => {
+      setOffClass(targetAlert, alertUp);
+    }, 10000);
+  } 
 
 })();

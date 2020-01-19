@@ -9,32 +9,7 @@ const templateCard = document.querySelector('#template-cards').content,
   modalEmbed = modal.querySelector('#embed'),
   modalFrame = modal.querySelector('iframe');
     
-  //console.log(blog)
-
-
 //SCRIPTS
-
-// Load json
-// fetch('https://denfurt.github.io/site_shelest/static/js/blogs.json')  
-//   .then(  
-//     function(response) {  
-//       if (response.status !== 200) {  
-//         console.log('Looks like there was a problem. Status Code: ' +  
-//           response.status);  
-//         return;  
-//       }
-
-//       // Examine the text in the response  
-//       /* response.json().then(function(data) {  
-//         console.table(data);  
-//       }); */
-//       const blogs = response.json(); 
-//       console.log(blogs)
-//     }  
-//   )  
-//   .catch(function(err) {  
-//     console.log('Fetch Error :-S', err);  
-//   });
 
 function status(response) {  
   if (response.status >= 200 && response.status < 300) {  

@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>СК ССО Шелест</title>
+  <meta name="keywords" content="страйкбол, айрсофт, тактическая подготовка, 
+    страйкбольная команда, тюменский страйкбол, играть в страйкбол, обучение страйкболу в команде,
+    поиск страйкбольной команды">
+  <meta name="description" content="Сайт страйкбольной команды Шелест, г. Тюмень. 
+    Обучаемся навыкам игры в страйкбол в команде, а так же прочим полезным навыкам.">
+  <title>Сайт страйкбольной команды Шелест, г. Тюмень</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./static/css/style.css">
@@ -13,8 +18,8 @@
 
 <body>
   <!-- Modal carousel-->
-  <div class="modal fade" id="exampleModalCarousel" tabindex="-1" role="carousel"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModalCarousel" tabindex="-1" role="carousel" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -44,7 +49,8 @@
     </div>
   </template>
   <!-- Modal posts-->
-  <div class="modal fade" id="exampleModalPosts" tabindex="-1" role="document" aria-labelledby="exampleModalPostsLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModalPosts" tabindex="-1" role="document" aria-labelledby="exampleModalPostsLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -69,6 +75,7 @@
     </div>
   </div>
   <div>
+
     <!-- header -->
     <header class="header" id="main">
       <div class="overlay"></div>
@@ -195,7 +202,6 @@
                   <p class="card-text">...</p>
                 </div>
                 <div class="card-footer">
-                  <!-- data-toggle="modal" data-target="#exampleModalPosts" -->
                   <a href="" class="card-link">Читать дальше...</a>
                 </div>
               </div>
@@ -254,35 +260,34 @@
     </div>
     <!-- Contact form -->
     <div class="contact-form" id="contact">
-      <!-- <div class="alert alert-success alert-custom d-none">Обращение отправлено успешно</div> -->
       <div class="container">
-        <form class="form" id="feedback" autocomplete="off">
+        <form class="form" action="" method="POST" id="feedback" autocomplete="off">
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
               <h1>Хотите к нам? Напишите!</h1>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-12 right">
               <div class="form-group form-custom">
-                <label for="inputName" class="label-custom">Имя</label>
+                <label for="inputName" class="label-custom">Имя*</label>
                 <input type="text" class="form-control form-control-lg" id="inputName" name="name"
                   aria-describedby="nameHelp">
                 <div class="invalid-feedback">Укажите имя</div>
               </div>
               <div class="form-group form-custom">
-                <label for="inputEmail" class="label-custom">Эл.почта</label>
-                <input type="text" class="form-control form-control-lg" id="inputEmail" name="email"
+                <label for="inputEmail" class="label-custom">Эл.почта*</label>
+                <input type="email" class="form-control form-control-lg" id="inputEmail" name="email"
                   aria-describedby="emailHelp">
                 <div class="invalid-feedback">Некорректный email</div>
               </div>
               <div class="form-group form-custom">
-                <label for="message" class="label-custom">Сообщение</label>
-                <textarea class="form-control form-control-lg" id="message"></textarea>
+                <label for="message" class="label-custom">Сообщение*</label>
+                <textarea class="form-control form-control-lg" id="message" name="question"></textarea>
                 <div class="invalid-feedback">Сообщение не может быть пустым</div>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
                   <input type="checkbox" class="form-check-input">
-                  Согласен на обработку персональных данных
+                  ツ Я не робот!
                 </label>
               </div>
               <div class=" d-flex justify-content-center">
@@ -293,7 +298,37 @@
           </div>
         </form>
       </div>
-      <!-- <div class="alert alert-success alert-custom d-none" role="alert">Сообщение отправлено успешно</div> -->
+      <!-- Spinner -->
+      <div class="container">
+        <div class="row justify-content-center">
+      <div id="alert-spinner" class="alert alert-warning col-lg-8 col-md-10 col-sm-12 d-none">
+        <div class="d-flex align-items-center">
+          <strong>Отправляем сообщение...</strong>
+          <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+        </div>
+      </div>
+        </div>
+      </div>
+      <!-- Alert message -->
+      <div class="container">
+        <div class="row justify-content-center alert-block">
+          <!-- Alert error -->
+          <div id="alert-danger" class="col-lg-8 col-md-10 col-sm-12 alert alert-danger alert-dismissible d-none alert-custom" role="alert">
+            Сообщение не отправлено. Попробуйте отправить сообщение ещё раз через некоторое время.
+            <button type="button" class="close" aria-label="Close">
+              <span class="alert-close" data-alert="alert-danger" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- Alert succes -->
+          <div id="alert-success" class="col-lg-8 col-md-10 col-sm-12 alert alert-success alert-dismissible d-none alert-custom" role="alert">
+            Сообщение отправлено успешно!
+            <button type="button" class="close" aria-label="Close">
+              <span class="alert-close" data-alert="alert-success" aria-hidden="true">×</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    
     </div>
   </div>
   <footer class="footer mt-auto py-3">

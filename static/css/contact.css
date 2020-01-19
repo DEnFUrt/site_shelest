@@ -24,11 +24,6 @@
   background: olivedrab;
 }
 
-/* .contact-form .right .form-control::placeholder {
-  color: #888;
-  font-size: 16px;
-} */
-
 .form-custom {
   position: relative;
 }
@@ -43,7 +38,7 @@
   cursor: text;
 }
 
-.label-custom-up{
+.label-custom-up {
   left: 5px;
   top: -12px;
   font-size: 13px;
@@ -55,7 +50,7 @@
   user-select: none;
 }
 
-.btn-custom{
+.btn-custom {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 30px;
@@ -63,8 +58,11 @@
   padding-top: 2px;
 }
 
-.alert-custom{
+.alert-custom {
   margin: auto;
-  /* max-width: 350px; */
   text-align: center;
+}
+
+.alert-custom>button {
+  outline: none;
 }
