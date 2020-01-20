@@ -86,3 +86,8 @@ function setOnEmbed(inputTarget) {
       inputTarget.classList.toggle('d-none');
   }
 };
+
+$('#exampleModalPosts').on('hidden.bs.modal', function () {
+  modalFrame.src = '';
+})
+  
