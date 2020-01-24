@@ -1,3 +1,5 @@
+import addErrElem from '../js/error.js';
+
 //CONSTANTS
 
 const templateCard = document.querySelector('#template-cards').content,
@@ -29,7 +31,8 @@ fetch('static/js/blogs.json')
   .then(function(data) {  
     parseJson(data.posts);  
   }).catch(function(error) {  
-    console.log('Request failed', error);  
+    console.log('Request failed', error);
+    addErrElem(blog);
   });
 
 function parseJson (posts) {
@@ -45,8 +48,7 @@ function addCard(post) {
   let templateTitleNewCard = templateNewCard.querySelector('.card-title');
   let templateTextNewCard = templateNewCard.querySelector('.card-text');
   let templateLinkNewCard = templateNewCard.querySelector('.card-link');
-  //let templateDivCarousel = templateItemCarousel.querySelector('.carousel-item');
-  
+    
   templateImgNewCard.src = post.srcImg;
   templateTitleNewCard.innerText = post.cardTitle;
   templateTextNewCard.innerText = post.cardTetx;
@@ -71,7 +73,7 @@ function addCardListener(linkCard, post) {
     setOffEmbed(modalEmbed);
   }
 
-    $('#exampleModalPosts').modal('show').modal('handleUpdate'); //функция jquery из пакета bootstrap активирует модальное окно с каруселью
+    $('#exampleModalPosts').modal('show').modal('handleUpdate'); //функция jquery из пакета bootstrap активирует модальное окно
   });
 }
 

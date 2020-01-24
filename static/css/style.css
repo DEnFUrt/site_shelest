@@ -7,6 +7,7 @@
 @import '../css/team.css';
 @import '../css/contact.css';
 @import '../css/modal.css';
+@import '../css/error.css';
 
 html,
 h1,
@@ -15,6 +16,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 a {
   font-family: 'Arsenal', sans-serif;
 }

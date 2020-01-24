@@ -1,0 +1,52 @@
+.error-elem {
+  width:100%;
+  height:460px;
+  overflow:hidden;
+  margin:0px;
+  padding:0px;
+  font-size:16px
+}
+
+.error-elem {
+  background:url('/static/img/404.jpg') center no-repeat #000;
+}
+
+.content {
+  width:100%;
+  text-align:center;
+  position:absolute;
+  bottom:10%;
+  left:0px;
+}
+
+.content a {
+  display:inline-block;
+  text-decoration:none;
+}
+
+.content a, .content p {
+  color:rgba(255, 255, 255, 0.493);
+}
+
+.content a:hover {
+  color:rgba(255, 255, 255, 0.911);
+}
+
+.content a {
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:20px;
+  left:0px;
+  font-size:20px;
+}
+
+.content p {
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:-10px;
+  left:0px;
+}
