@@ -31,6 +31,7 @@ fetch('findfile.php')
   });
 
 function parseListFile(filesImg) {
+  filesImg.sort();
   for (let i = 0; i < filesImg.length; i++) {
     let fileImg = filesImg[i];
     addImgAlbum(fileImg, i);
