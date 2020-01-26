@@ -31,7 +31,7 @@
 
 .description p {
 --p-font-size: 1.5rem;
-  color:#666;
+  color:rgb(65, 63, 63);
 font-size: var(--p-font-size);
 width: 90%;
 line-height: 1.5;
