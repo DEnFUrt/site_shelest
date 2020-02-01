@@ -56,9 +56,9 @@
         setOnClass(alertSuccess, alertUp);
         offAlert(alertSuccess);
       },
-      error: function(responseText) {
-        console.log(responseText);
-        if (responseText !== '') {
+      error: function(data) {
+        console.log(data.responseText);
+        if (data.responseText !== '') {
           alertDanger.textContent = responseText;
         }
         setOnClass(alertDanger, alertUp);
