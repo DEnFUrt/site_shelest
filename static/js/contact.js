@@ -58,7 +58,7 @@
       },
       error: function(data) {
         if (data.responseText !== '') {
-          alertDanger.innerHTML = data.responseText;
+          alertDanger.querySelector('alert-danger-span').textContent = data.responseText;
         }
         setOnClass(alertDanger, alertUp);
         offAlert(alertDanger);
