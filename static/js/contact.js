@@ -57,7 +57,7 @@
         offAlert(alertSuccess);
       },
       error: function(responseText) {
-        if (responseText) {
+        if (responseText !== '') {
           alertDanger.textContent = responseText;
         }
         setOnClass(alertDanger, alertUp);
