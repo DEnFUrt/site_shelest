@@ -58,7 +58,7 @@
       },
       error: function(data) {
         if (data.responseText !== '') {
-          alertDanger.textContent = data.responseText;
+          alertDanger.innerText = data.responseText;
         }
         setOnClass(alertDanger, alertUp);
         offAlert(alertDanger);
