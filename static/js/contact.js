@@ -10,6 +10,8 @@
     btnCloseAlert = document.querySelector('.alert-block'),
     form = document.querySelector('.form');
 
+    
+
   //PARAMETERS
   const invalidFeedbackVisible = 'd-block',
     labelUp = 'label-custom-up',
@@ -58,7 +60,7 @@
       },
       error: function(data) {
         if (data.responseText !== '') {
-          let alertDangerSpan = alertDanger.querySelector('alert-danger-span');
+          let alertDangerSpan = alertDanger.querySelector('.alert-danger-span');
           alertDangerSpan.value = data.responseText;
         }
         setOnClass(alertDanger, alertUp);
