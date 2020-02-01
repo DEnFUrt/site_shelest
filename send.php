@@ -94,10 +94,9 @@ try {
         $mail->send();
     } else {
         header('HTTP/1.0 403 Forbidden');
-        echo "Сообщение не было отправлено. ";
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
     }
 } catch (Exception $e) {
     header('HTTP/1.0 403 Forbidden');
-    echo "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+    echo "Сообщение не было отправлено. 123 Причина ошибки: {$mail->ErrorInfo}";
 }
