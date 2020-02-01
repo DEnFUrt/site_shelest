@@ -9,6 +9,12 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['question'];
 $mail = new PHPMailer\PHPMailer\PHPMailer();
+
+if (!trim($name) or (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) or (!trim($text))) {
+	echo "Сообщение не было отправлено. Проверьте адрес вашей почты";
+	exit();
+}
+
 try {
     $msg = "ok";
 
@@ -60,6 +66,9 @@ try {
     $mail->Body    = "<b>Имя:</b> $name <br>
         <b>Почта:</b> $email<br><br>
         <b>Сообщение:</b><br>$text";
+    $mail->AltBody    = "Имя: $name ,
+        Почта: $email ,
+        Сообщение:$text";
 
     // Проверяем отравленность сообщения
     if ($mail->send()) {
@@ -83,7 +92,7 @@ try {
         $mail->addAddress($email);
         $mail->send();
     } else {
-        echo "Сообщение не было отправлено. Проверьте адрес вашей почты";
+        echo "Сообщение не было отправлено. ";
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
 } catch (Exception $e) {
