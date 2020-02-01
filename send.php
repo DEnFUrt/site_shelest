@@ -11,7 +11,8 @@ $text = $_POST['question'];
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 if (!trim($name) or (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) or (!trim($text))) {
-	echo "Сообщение не было отправлено. Проверьте адрес вашей почты";
+    header('HTTP/1.0 403 Forbidden');
+    echo "Сообщение не было отправлено. Проверьте адрес вашей почты";
 	exit();
 }
 
@@ -92,9 +93,11 @@ try {
         $mail->addAddress($email);
         $mail->send();
     } else {
+        header('HTTP/1.0 403 Forbidden');
         echo "Сообщение не было отправлено. ";
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
 } catch (Exception $e) {
+    header('HTTP/1.0 403 Forbidden');
     echo "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
