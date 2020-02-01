@@ -59,7 +59,7 @@
       error: function(data) {
         if (data.responseText !== '') {
           let alertDangerSpan = alertDanger.querySelector('alert-danger-span');
-          alertDangerSpan.textContent = data.responseText;
+          alertDangerSpan.value = data.responseText;
         }
         setOnClass(alertDanger, alertUp);
         offAlert(alertDanger);
