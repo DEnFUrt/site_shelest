@@ -12,7 +12,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 if (!trim($name) or (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) or (!trim($text))) {
     header('HTTP/1.0 403 Forbidden');
-    echo "Сообщение не было отправлено. Проверьте адрес вашей почты";
+    echo "Сообщение не было отправлено. Проверьте заполнение полей и адрес вашей почты";
 	exit();
 }
 
@@ -38,7 +38,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'ssl://smtp.gmail.com'; // SMTP сервера GMAIL
     $mail->Username   = 'Shelest.ckcco@gmail.com'; // Логин на почте
-    $mail->Password   = 'Ljr72vi'; // Пароль на почте
+    $mail->Password   = 'Ljr72vip'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('Shelest.ckcco@gmail.com', 'Сообщение с сайта СК ССО Шелест'); // Адрес самой почты и имя отправителя
@@ -98,5 +98,5 @@ try {
     }
 } catch (Exception $e) {
     header('HTTP/1.0 403 Forbidden');
-    echo "Сообщение не было отправлено. 123 Причина ошибки: {$mail->ErrorInfo}";
+    echo "Сообщение не было отправлено. Описание ошибки: {$mail->ErrorInfo}";
 }
