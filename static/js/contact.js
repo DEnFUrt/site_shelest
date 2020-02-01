@@ -57,6 +57,7 @@
         offAlert(alertSuccess);
       },
       error: function(responseText) {
+        console.log(responseText);
         if (responseText !== '') {
           alertDanger.textContent = responseText;
         }
