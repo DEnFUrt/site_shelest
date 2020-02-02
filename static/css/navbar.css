@@ -10,10 +10,24 @@
   border-radius: 5px;
 }
 
-.nav-link:hover,
-.navbar-brand:hover {
+.nav-link:hover {
   color:  black;
   background: darkolivegreen;
+}
+
+.navbar-brand {
+  background-image: url('../img/logo.jpg');
+  height: 50px;
+  width: 70px;
+  box-shadow:  
+  0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+   0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.navbar-brand:hover {
+  box-shadow: 0 0 5px 5px darkolivegreen;
 }
 
 .nav-link {
