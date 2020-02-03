@@ -8,7 +8,8 @@
 }
 
 .error-elem {
-  background:url('/static/img/404.jpg') center no-repeat #000;
+  background:url('../img/404.jpg') center no-repeat #000;
+  /* background:url('/static/img/404.jpg') center no-repeat #000; */
 }
 
 .content {

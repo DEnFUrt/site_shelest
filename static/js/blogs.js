@@ -25,7 +25,7 @@ function json(response) {
   return response.json()  
 }
 
-fetch('static/js/blogs.json')  
+fetch('static/js/blogs.json') 
   .then(status)  
   .then(json)  
   .then(function(data) {  
