@@ -42,7 +42,8 @@
   });
 
   btnSubmit.addEventListener('click', (e) => {
-    event.preventDefault();
+    const currentTarget = e.currentTarget;
+    e.preventDefault();
     let form_data = $(form).serialize();
     $.ajax({
       type: "POST",
@@ -57,7 +58,7 @@
       success: function () {
         setOnClass(alertSuccess, alertUp);
         offAlert(alertSuccess);
-        formReset();
+        formReset(currentTarget);
       },
       error: function(data) {
         if (data.responseText !== '') {
@@ -175,14 +176,14 @@
     }
   }
 
-  function formReset() {
+  function formReset(currentTarget) {
     //возвращаем Label на место  и отключаем кнопку
     form.reset();
     for(let formControl of formControls) {
       setOffClass(formControl.previousElementSibling, labelUp);
     }
-    setOnAttr(e.currentTarget, btnSubmitAttr);
-    setOnClass(e.currentTarget, btnSubmitClass);
+    setOnAttr(currentTarget, btnSubmitAttr);
+    setOnClass(currentTarget, btnSubmitClass);
   }
 
   function offAlert(targetAlert) {
