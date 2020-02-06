@@ -57,6 +57,7 @@
       success: function () {
         setOnClass(alertSuccess, alertUp);
         offAlert(alertSuccess);
+        formReset();
       },
       error: function(data) {
         if (data.responseText !== '') {
@@ -67,15 +68,6 @@
         offAlert(alertDanger);
       }
     });
-
-    form.reset();
-
-    //возвращаем Label на место
-    for (let formControl of formControls) {
-      setOffClass(formControl.previousElementSibling, labelUp);
-    }
-    setOnAttr(e.currentTarget, btnSubmitAttr);
-    setOnClass(e.currentTarget, btnSubmitClass);
   });
 
   btnCloseAlert.addEventListener('click', handlerAlert);
@@ -181,6 +173,16 @@
     } else {
       return true;
     }
+  }
+
+  function formReset() {
+    //возвращаем Label на место  и отключаем кнопку
+    form.reset();
+    for(let formControl of formControls) {
+      setOffClass(formControl.previousElementSibling, labelUp);
+    }
+    setOnAttr(e.currentTarget, btnSubmitAttr);
+    setOnClass(e.currentTarget, btnSubmitClass);
   }
 
   function offAlert(targetAlert) {
