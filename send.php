@@ -37,8 +37,8 @@ try {
     );
     // Настройки вашей почты
     $mail->Host       = 'ssl://smtp.gmail.com'; // SMTP сервера GMAIL
-    $mail->Username   = 'Shelest.ckcco@gmail.com'; // Логин на почте
-    $mail->Password   = 'Ljr72vip'; // Пароль на почте
+    $mail->Username   = 'mail@gmail.com'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('Shelest.ckcco@gmail.com', 'Сообщение с сайта СК ССО Шелест'); // Адрес самой почты и имя отправителя
